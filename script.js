@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: 'Gemini_Generated_Image_tfvj6ptfvj6ptfvj.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            } ],
             { 
                 name: 'AFPESP ITANHAEM', 
                 code: '6997', 
@@ -52,14 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
             },
-    { 
+            { 
                 name: 'AFPESP CARAGUATATUBA', 
                 code: '7063', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
             },
-        { 
+            { 
                 name: 'AFPESP BORACEIA', 
                 code: '7105', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const link = document.createElement('a');
         link.href = url;
-        link.download = `clientes_3.0web_${new Date().toISOString().split('T')[0]}.json`;
+        link.download = `clientes_3.0web_${new Date().toISOString().split("T")[0]}.json`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
