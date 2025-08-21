@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            }
+            },
         ],
         'Light Web Plus': [
             { 
