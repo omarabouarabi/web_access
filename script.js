@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: 'Gemini_Generated_Image_tfvj6ptfvj6ptfvj.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            }
+            } ]
             { 
                 name: 'AFPESP ITANHAEM', 
                 code: '6997', 
