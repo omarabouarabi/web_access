@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessos Rápidos 3.0Web By Omar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header com navegação -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="Gemini_Generated_Image_tfvj6ptfvj6ptfvj.png" alt="Logo Desbravador" class="header-logo">
+                <div class="header-text">
+                    <h1>Acessos Rápidos 3.0Web</h1>
+                    <p>Portal de acesso aos sistemas Desbravador Software</p>
+                    <span class="by-omar">By Omar Arabi</span>
+                </div>
+            </div>
+            <div class="user-section">
+                <div class="user-info">
+                    <span id="user-name">Usuário</span>
+                    <span id="user-role" class="user-role">Visualizador</span>
+                </div>
+                <div class="user-actions">
+                    <button id="user-management-btn" class="admin-btn" style="display: none;">👥 Usuários</button>
+                    <button id="logout-btn" class="logout-btn">🚪 Sair</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Seção de introdução -->
+        <div class="intro-section">
+            <h2>Bem-vindo ao Portal de Acessos Rápidos</h2>
+            <p>Acesse rapidamente os sistemas 3.0 Web Plus e Light Web Plus da Desbravador Software. Selecione o cliente desejado abaixo para ser redirecionado ao sistema correspondente.</p>
+        </div>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="🔍 Pesquisar por nome do hotel ou código do cliente...">
+                <button id="clear-search" class="clear-search-btn" title="Limpar pesquisa">✕</button>
+            </div>
+            <div id="search-results-info" class="search-results-info"></div>
+        </div>
+
+        <!-- Seção 3.0 Web Plus -->
+        <section id="web-plus" class="clients-section">
+            <div class="section-header">
+                <h2>🏨 3.0 Web Plus</h2>
+                <p>Sistema completo de gestão hoteleira para hotéis de pequeno, médio e grande porte.</p>
+                <button id="add-web-plus-btn" class="add-client-btn admin-only" style="display: none;">➕ Adicionar Cliente</button>
+            </div>
+            <div id="web-plus-list" class="clients-grid"></div>
+        </section>
+
+        <!-- Seção Light Web Plus -->
+        <section id="light-web-plus" class="clients-section">
+            <div class="section-header">
+                <h2>🏠 Light Web Plus</h2>
+                <p>Solução simplificada para pousadas, hostels e estabelecimentos menores.</p>
+                <button id="add-light-web-plus-btn" class="add-client-btn admin-only" style="display: none;">➕ Adicionar Cliente</button>
+            </div>
+            <div id="light-web-plus-list" class="clients-grid"></div>
+        </section>
+
+        <!-- Seção de administração -->
+        <section id="admin-section" class="admin-section admin-only" style="display: none;">
+            <div class="section-header">
+                <h2>⚙️ Administração</h2>
+                <p>Ferramentas administrativas do portal.</p>
+            </div>
+            <div class="admin-actions">
+                <button id="export-data-btn" class="admin-action-btn">📥 Exportar Dados</button>
+                <button id="import-data-btn" class="admin-action-btn">📤 Importar Dados</button>
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para adicionar/editar cliente -->
+    <div id="client-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Adicionar Cliente</h2>
+            <form id="client-form">
+                <div class="form-group">
+                    <label for="client-name">Nome do Hotel:</label>
+                    <input type="text" id="client-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="client-code">Código do Cliente:</label>
+                    <input type="text" id="client-code" name="code" required>
+                </div>
+                <div class="form-group" id="client-type-group">
+                    <label for="client-type">Tipo de Sistema:</label>
+                    <select id="client-type" name="type" required>
+                        <option value="">Selecione o tipo</option>
+                        <option value="3.0 Web Plus">3.0 Web Plus</option>
+                        <option value="Light Web Plus">Light Web Plus</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="client-image">URL da Imagem (opcional):</label>
+                    <input type="url" id="client-image" name="image" placeholder="https://exemplo.com/imagem.png">
+                    <small class="form-help">Deixe em branco para usar a imagem padrão</small>
+                </div>
+                <div class="current-image-preview" id="current-image-preview" style="display: none;">
+                    <label>Imagem Atual:</label>
+                    <img id="preview-image" src="" alt="Preview" style="max-width: 100px; max-height: 100px; border-radius: 8px; margin-top: 10px;">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submit-btn">Adicionar Cliente</button>
+                    <button type="button" id="cancel-btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de gerenciamento de usuários -->
+    <div id="users-modal" class="modal">
+        <div class="modal-content large-modal">
+            <span class="close-users-modal">&times;</span>
+            <h2>Gerenciamento de Usuários</h2>
+            <div class="users-content">
+                <div class="users-list">
+                    <h3>Usuários Cadastrados</h3>
+                    <div id="users-table"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de mensagens -->
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-message-modal">&times;</span>
+            <div id="modal-message"></div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Acessos Rápidos 3.0Web By Omar - Desenvolvido para Desbravador Software</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

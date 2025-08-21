@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Acessos Rápidos 3.0Web By Omar</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <img src="Gemini_Generated_Image_tfvj6ptfvj6ptfvj.png" alt="Logo Desbravador" class="logo">
+                <h1>Acessos Rápidos 3.0Web</h1>
+                <p>Portal de Acesso aos Sistemas Desbravador Software</p>
+                <span class="by-omar">By Omar Arabi</span>
+            </div>
+
+            <div class="login-form-container">
+                <form id="login-form" class="login-form">
+                    <h2>Fazer Login</h2>
+                    <div class="form-group">
+                        <label for="username">Usuário</label>
+                        <input type="text" id="username" name="username" required minlength="2" placeholder="Digite seu usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required minlength="6" placeholder="Digite sua senha">
+                    </div>
+                    <button type="submit" class="login-btn">Entrar</button>
+                    <div class="form-links">
+                        <a href="#" id="register-link">Não tem conta? Cadastre-se</a>
+                    </div>
+                </form>
+
+                <form id="register-form" class="register-form hidden">
+                    <h2>Criar Conta</h2>
+                    <div class="form-group">
+                        <label for="reg-username">Usuário</label>
+                        <input type="text" id="reg-username" name="username" required minlength="2" placeholder="Mínimo 2 caracteres">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Senha</label>
+                        <input type="password" id="reg-password" name="password" required minlength="6" placeholder="Mínimo 6 caracteres">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirmar Senha</label>
+                        <input type="password" id="reg-confirm-password" name="confirm-password" required minlength="6" placeholder="Confirme sua senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-name">Nome Completo</label>
+                        <input type="text" id="reg-name" name="name" required placeholder="Seu nome completo">
+                    </div>
+                    <button type="submit" class="register-btn">Cadastrar</button>
+                    <div class="form-links">
+                        <a href="#" id="login-link">Já tem conta? Faça login</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="login-footer">
+                <p>&copy; 2025 Desbravador Software - Desenvolvido por Omar Arabi</p>
+            </div>
+        </div>
+
+        <div class="background-animation">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </div>
+
+    <!-- Modal de Mensagens -->
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-message"></div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
+
