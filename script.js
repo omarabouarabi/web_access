@@ -37,63 +37,63 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: 'Gemini_Generated_Image_tfvj6ptfvj6ptfvj.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            };
             { 
                 name: 'AFPESP ITANHAEM', 
                 code: '6997', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            };
             { 
                 name: 'AFPESP MARESIAS', 
                 code: '7064', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            };
             { 
                 name: 'AFPESP CARAGUATATUBA', 
                 code: '7063', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            };
             { 
                 name: 'AFPESP BORACEIA', 
                 code: '7105', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            };
             { 
                 name: 'AFPESP CAPITAL', 
                 code: '7115', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            };
             { 
                 name: 'AFPESP PERUIBE I', 
                 code: '7135', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            };
             { 
                 name: 'AFPESP TERMAS IBIRA', 
                 code: '7137', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            };
             { 
                 name: 'AFPESP FAZENDA IBIRA', 
                 code: '7138', 
                 image: 'https://cdn.afpesp.org.br/images/site/logos/afpesp-brasao-1x.png',
                 createdBy: 'system',
                 createdAt: new Date().toISOString()
-            },
+            }
         ],
         'Light Web Plus': [
             { 
